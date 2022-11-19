@@ -15,3 +15,4 @@ These are the dotfiles for my currrent rice.
 * Install SF Pro & Jet Brains Nerd font fonts
 * Install cava
 * Install pfetch
+* **IMPORTANT** Change the tag bindings in DWM's config.h, I'm czech and thus I use the czech qwertz which has a modified number row
