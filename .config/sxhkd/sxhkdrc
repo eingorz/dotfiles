@@ -1,0 +1,49 @@
+#################################################################
+# SUPER + SHIFT KEYS
+#################################################################
+#reload sxhkd:
+super + shift + s
+	pkill -USR1 -x sxhkd
+
+#Picom script
+super + o
+	exec $HOME/.config/dwm/picom-toggle.sh
+
+#Bitwarden
+super + shift + p
+	bitwarden
+#################################################################
+#     SCREENSHOTS
+#################################################################
+
+#flameshot
+Print
+     flameshot gui
+
+#################################################################
+#     MULTIMEDIA KEYS
+#################################################################
+
+#Raises volume
+XF86AudioRaiseVolume
+    pamixer -i 10 | volnotif
+
+#Lowers volume
+XF86AudioLowerVolume
+    pamixer -d 10 | volnotif
+
+#PLAY
+XF86AudioPlay
+    playerctl play-pause
+
+#Next
+XF86AudioNext
+    playerctl next
+
+#previous
+XF86AudioPrev
+    playerctl previous
+
+#Stop
+XF86AudioStop
+    playerctl stop
