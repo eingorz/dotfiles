@@ -18,3 +18,6 @@ These are the dotfiles for my currrent rice.
 * Install pfetch
 * Install the picom jonaburg fork
 * **IMPORTANT** Change the tag bindings in DWM's config.h, I'm czech and thus I use the czech qwertz which has a modified number row
+
+## P. S.
+The slstatus config is missing because I haven't uploaded it here when I set it up and I have since switched window managers. Sorry.
