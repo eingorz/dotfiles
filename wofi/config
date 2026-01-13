@@ -1,0 +1,10 @@
+show=drun
+prompt=RUN :
+width=500
+height=350
+location=center
+allow_images=true
+image_size=32
+insensitive=true
+columns=1
+

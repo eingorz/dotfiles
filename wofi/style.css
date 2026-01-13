@@ -1,0 +1,65 @@
+* {
+    font-family: "JetBrainsMonoNL Nerd Font", "Fira Code", monospace;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* Main window */
+window {
+    background-color: rgba(0, 0, 0, 0.55); /* works well with picom blur */
+    border: 1px solid #fc3f3f;
+    border-radius: 0px;
+}
+
+/* Outer box */
+#outer-box {
+    padding: 20px;
+}
+
+/* Input bar */
+#input {
+    background-color: transparent;
+    border: 1px solid #fc3f3f;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+    color: #62edfc;
+    box-shadow: 1px 1px 3px #fc3f3f;
+}
+
+#input:focus {
+    border-color: #2ffc5f;
+}
+
+/* Scroll area */
+#scroll {
+    margin-top: 5px;
+}
+
+/* Entries */
+#entry {
+    padding: 8px 12px;
+    margin: 4px 0;
+    background-color: transparent;
+    color: #62edfc;
+    text-shadow: 1px 2px 3px #fc3f3f;
+}
+
+/* Entry hover */
+#entry:hover {
+    color: #2ffc5f;
+    background-color: transparent;
+}
+
+/* Selected entry */
+#entry:selected {
+    color: black;
+    background-color: #fc3f3f;
+    text-shadow: none;
+    box-shadow: 1px 1px 3px #fc3f3f;
+}
+
+/* Icons */
+#entry image {
+    margin-right: 10px;
+}
+
