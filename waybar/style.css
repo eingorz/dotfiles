@@ -36,6 +36,7 @@ window#waybar {
 #pulseaudio:hover {
     color: #2ffc5f;
     border: 0;
+    background-color: transparent;
 }
 
 #memory{
