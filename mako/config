@@ -1,11 +1,11 @@
 background-color=#00000070
 padding=10
 border-size=1
-border-color=#fc3f3f
-font=JetBrainsMonoNL Nerd Font 10
+border-color=#eaeaea40
+font=JetBrainsMono Nerd Font Mono 10
 icons=1
 max-icon-size=128
-text-color=#62edfc
+text-color=#f0f0f0
 margin=15
 outer-margin=20,30,20,10
 default-timeout=10000

@@ -1,0 +1,12 @@
+width=520
+height=360
+location=top
+show=drun
+prompt=run
+allow_images=true
+image_size=22
+columns=1
+insensitive=true
+matching=contains
+term=kitty
+key_expand=Tab

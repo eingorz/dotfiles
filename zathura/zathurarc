@@ -20,39 +20,39 @@ set zoom-min 10
 set guioptions ""
 
 # Font
-set font "Times New Roman 16"
+set font "JetBrainsMono Nerd Font Mono 16"
 
 # Colors (Cyberpunk theme)
-set default-bg "#140000"        # background
-set default-fg "#ff3c3c"        # foreground
+set default-bg "#0a0a0a"        # background
+set default-fg "#eaeaea"        # foreground
 
-set statusbar-bg "#090300"
-set statusbar-fg "#ff1100"
+set statusbar-bg "#0a0a0a"
+set statusbar-fg "#eaeaea"
 
-set inputbar-bg "#090300"
-set inputbar-fg "#fded02"
+set inputbar-bg "#0a0a0a"
+set inputbar-fg "#eaeaea"
 
-set notification-error-bg "#ff1100"
-set notification-error-fg "#140000"
+set notification-error-bg "#1a1a1a"
+set notification-error-fg "#eaeaea"
 
-set notification-warning-bg "#fded02"
-set notification-warning-fg "#140000"
+set notification-warning-bg "#1a1a1a"
+set notification-warning-fg "#eaeaea"
 
-set highlight-color "#26bdfd"
-set highlight-active-color "#b5e4f4"
+set highlight-color "#eaeaea"
+set highlight-active-color "#ffffff"
 
-set completion-bg "#090300"
-set completion-fg "#a5a2a2"
-set completion-highlight-bg "#807d7c"
-set completion-highlight-fg "#140000"
+set completion-bg "#0a0a0a"
+set completion-fg "#eaeaea"
+set completion-highlight-bg "#1a1a1a"
+set completion-highlight-fg "#ffffff"
 
-set notification-bg "#3a3432"
-set notification-fg "#f7f7f7"
+set notification-bg "#1a1a1a"
+set notification-fg "#eaeaea"
 
 # Recolor settings
 set recolor "true"
-set recolor-lightcolor "#140000"
-set recolor-darkcolor "#ff3c3c"
+set recolor-lightcolor "#0a0a0a"
+set recolor-darkcolor "#eaeaea"
 set recolor-reverse-video "true"
 set recolor-keephue "true"
 

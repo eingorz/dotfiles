@@ -1,22 +1,28 @@
 // -*- mode: jsonc -*-
 {
-    // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 26, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    "spacing": 2, // Gaps between modules (4px)
+    "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "margin": "5, 30, 0, 30",
+    "margin": "0, 0, 0, 0",
     "modules-left": [
+	"hyprland/workspaces",
 	"cpu",
 	"memory"
     ],
     "modules-center": [
-        "hyprland/workspaces"
+        "hyprland/window"
     ],
     "modules-right": [
         //"mpd",
        // "idle_inhibitor",
+        "tray",
+        "network",
+        "pulseaudio",
+        "power-profiles-daemon",
+        "battery",
         "clock"
        // "custom/power"
     ],
@@ -42,39 +48,87 @@
     "hyprland/workspaces": {
 	"format": "{icon}",
 	"format-icons": {
-		"1": "TERM",
-		"2": "NET",
-		"3": "DISC",
-		"4": "GAME",
-		"5": "SPOT",
-		"6": "WORK",
-		"7": "NOTE",
-		"8": "TMP",
-		"default": "TMP-X"
+		"default": "",
+        "active": "󰥱",
+        "empty": ""
 	},
         "persistent-workspaces": {
             "*": [1,2,3,4,5,6,7] // 5 workspaces by default on every monitor
         }
     },
+
+    "hyprland/window": {
+        "format": "{title}",
+        "max-length": 60,
+        "separate-outputs": true
+    },
+    "tray": {
+        "icon-size": 16,
+        "spacing": 8
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": " {signalStrength}%",
+        "format-ethernet": "󰈀 {ipaddr}",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "󰈀 (no ip)",
+        "format-disconnected": "󰤭",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "󰕾 {volume}%",
+        "format-muted": "󰖁",
+        "format-source": "󰍬 {volume}%",
+        "format-source-muted": "󰍭",
+        "on-click": "pavucontrol"
+    },
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "󰓅",
+        "performance": "󰓅",
+        "balanced": "󰾅",
+        "power-saver": "󰾆"
+      }
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": "󰂄 {capacity}%",
+        "format-icons": ["󰂎","󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"]
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+    },
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "󰥔 {:%H:%M}",
         "format-alt": "{:%Y-%m-%d}"
     },
 
     "cpu": {
-        "format": "{icon} CPU",
+        "format": " {usage}%",
         "format-alt": "{avg_frequency} GHz",
         "interval": 3,
 	"format-icons": {
-    		"default": ["░░░░░░░░░░░","█░░░░░░░░░░","██░░░░░░░░░","███░░░░░░░░","████░░░░░░░", "█████░░░░░░", "██████░░░░░","███████░░░░","████████░░░","█████████░░", "██████████░", "███████████",] },
-},
+		"default": ["▁","▂","▃","▄","▅","▆","▇","█"]
+	}
+    },
 
 
     "memory": {
-        "format": "{icon} MEM",
+        "format": " {percentage}%",
         "interval": 3,
         "format-icons": {
-            "default": ["░░░░░░░░░░░","█░░░░░░░░░░","██░░░░░░░░░","███░░░░░░░░","████░░░░░░░", "█████░░░░░░", "██████░░░░░","███████░░░░","████████░░░","█████████░░", "██████████░", "███████████",] },
-    },
+		"default": ["▁","▂","▃","▄","▅","▆","▇","█"]
+        }
+    }
 }

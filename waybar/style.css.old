@@ -1,7 +1,7 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: "JetBrainsMonoNL Nerd Font Mono", monospace;
-    font-size: 19px;
+    font-size: 24px;
     color: #cfcfcf;
 }
 

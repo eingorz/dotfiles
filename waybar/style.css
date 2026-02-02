@@ -1,55 +1,96 @@
 * {
-    font-family: "JetBrainsMonoNL Nerd Font", "Fira Code", monospace;
+    font-family: "JetBrainsMono Nerd Font Mono", "JetBrainsMonoNL Nerd Font", "Fira Code", monospace;
     font-weight: 600;
+    font-style: italic;
     font-size: 16px;
 }
 
 window#waybar {
-    background: transparent; /* actual blur from picom */
-    border-bottom: 1px solid #fc3f3f;
+    background: rgba(10, 10, 10, 0.92);
+    border-bottom: 1px solid rgba(235, 235, 235, 0.18);
 }
 
-#workspaces, #cpu, #memory, #network, #pulseaudio, #temperature, #power-profiles-daemon, #custom-spotify, #backlight, #battery, #idle_inhibitor {
-    background: transparent;
-    padding: 8px 12px;
-    margin: 6px;
-    color: #62edfc;
-    text-shadow: 1px 2px 3px #FC3F3F;
+#cpu, #memory, #network, #pulseaudio, #power-profiles-daemon, #custom-spotify, #battery, #idle_inhibitor, #tray, #hyprland-window, #clock {
+    background: rgba(0, 0, 0, 0);
+    padding: 4px 10px;
+    margin: 2px 4px;
+    min-height: 22px;
+    border-radius: 0px;
+    border: 0px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    color: rgba(235, 235, 235, 0.92);
+    text-shadow: none;
 }
-#clock{
-    background: #fc3f3f;
-    padding: 8px 12px;
-    margin: 15px;
-    box-shadow: 1px 1px 3px 1px #FC3F3F;
-    color: black;
 
+#workspaces {
+    background: rgba(0, 0, 0, 0);
+    padding: 0px;
+    margin: 2px 4px;
+    min-height: 22px;
+    border-radius: 0px;
+    border: 0px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+
+#hyprland-window {
+    padding-left: 12px;
+    padding-right: 12px;
+    min-width: 220px;
+    color: rgba(235, 235, 235, 0.85);
+    border-bottom-color: rgba(235, 235, 235, 0.18);
 }
 
 #workspaces button{
-    color: #a72020;
-    text-shadow: 1px 2px 3px #fc3f3f;
+    color: rgba(235, 235, 235, 0.60);
+    background: transparent;
+    font-size: inherit;
+    min-height: 22px;
+    border: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 0px;
+    padding: 4px 10px;
+    margin: 0px 0px;
 }
 
 /* Hover glow */
 #workspaces button:hover,
 #network:hover,
 #pulseaudio:hover {
-    color: #2ffc5f;
-    border: 0;
-    background-color: transparent;
+    color: rgba(245, 245, 245, 0.92);
+    border-bottom-color: rgba(245, 245, 245, 0.55);
+    background-color: rgba(245, 245, 245, 0.06);
 }
 
-#memory{
-    color: #2ffc5f;
+#memory,
+#cpu {
+    color: rgba(235, 235, 235, 0.92);
 }
-#cpu{
-    color: #62edfc;
+
+#cpu {
+    color: rgba(235, 235, 235, 0.92);
+}
+
+#memory {
+    color: rgba(235, 235, 235, 0.92);
+}
+
+#cpu:hover,
+#memory:hover {
+    border-bottom-color: rgba(245, 245, 245, 0.55);
+    background-color: rgba(245, 245, 245, 0.06);
 }
 
 #workspaces button.active {
-  color: #62edfc;
-  background-color: transparent;
-  border-radius: 2px;
+  color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.10);
+  border-bottom-color: rgba(255, 255, 255, 0.85);
+  border-radius: 0px;
+}
+
+#workspaces button.urgent {
+  color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.14);
+  border-bottom-color: rgba(255, 255, 255, 0.95);
 }
 
 

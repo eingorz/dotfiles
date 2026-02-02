@@ -1,54 +1,65 @@
 * {
     font-family: "JetBrainsMonoNL Nerd Font", "Fira Code", monospace;
     font-weight: 600;
+    font-style: italic;
     font-size: 16px;
 }
 
 window#waybar {
-    background: transparent; /* actual blur from picom */
-    border-top: 0px solid #fc3f3f;
+    background: rgba(10, 10, 18, 0.88);
+    border-top: 2px solid rgba(168, 85, 247, 0.70);
 }
 
-#workspaces, #cpu, #memory, #network, #pulseaudio, #temperature, #power-profiles-daemon, #custom-spotify, #backlight, #battery, #idle_inhibitor {
-    background: transparent;
-    padding: 8px 12px;
-    margin: 6px;
-    color: #62edfc;
-    text-shadow: 1px 2px 3px #FC3F3F;
-}
-#clock{
-    background: #fc3f3f;
-    padding: 8px 12px;
-    margin: 15px;
-    box-shadow: 1px 1px 3px 1px #FC3F3F;
-    color: black;
-
+#workspaces, #cpu, #memory, #network, #pulseaudio, #temperature, #power-profiles-daemon, #custom-spotify, #backlight, #battery, #idle_inhibitor, #tray, #clock {
+    background: rgba(0, 0, 0, 0);
+    padding: 6px 12px;
+    margin: 4px 6px;
+    border-radius: 0px;
+    border: 0px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    color: #eaf2ff;
+    text-shadow: none;
 }
 
 #workspaces button{
-    color: #a72020;
-    text-shadow: 1px 2px 3px #fc3f3f;
+    color: rgba(234, 242, 255, 0.85);
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 0px;
+    padding: 2px 10px;
+    margin: 0px 0px;
 }
 
 /* Hover glow */
 #workspaces button:hover,
 #network:hover,
 #pulseaudio:hover {
-    color: #2ffc5f;
-    border: 0;
+    color: #22d3ff;
+    border-bottom-color: rgba(34, 211, 255, 1.00);
+    background-color: rgba(34, 211, 255, 0.14);
 }
 
-#memory{
-    color: #2ffc5f;
+#memory,
+#cpu {
+    color: #eaf2ff;
 }
-#cpu{
-    color: #62edfc;
+
+#cpu {
+    color: #22d3ff;
+    border-bottom-color: rgba(34, 211, 255, 0.95);
+}
+
+#memory {
+    color: #a855f7;
+    border-bottom-color: rgba(168, 85, 247, 0.95);
 }
 
 #workspaces button.active {
-  color: #62edfc;
-  background-color: transparent;
-  border-radius: 2px;
+  color: #a855f7;
+  background-color: rgba(168, 85, 247, 0.18);
+  border-bottom-color: rgba(168, 85, 247, 1.00);
+  border-radius: 0px;
 }
 
 
