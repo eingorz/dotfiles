@@ -1,11 +1,10 @@
 // -*- mode: jsonc -*-
 {
     "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 26, // Waybar height (to be removed for auto height)
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 32, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
-    // Choose the order of the modules
     "margin": "0, 0, 0, 0",
     "modules-left": [
 	"hyprland/workspaces",
@@ -19,7 +18,7 @@
         //"mpd",
        // "idle_inhibitor",
         "tray",
-        "network",
+        /*"network"*,*/
         "pulseaudio",
         "power-profiles-daemon",
         "battery",
@@ -46,14 +45,20 @@
 
 
     "hyprland/workspaces": {
-	"format": "{icon}",
-	"format-icons": {
-		"default": "",
-        "active": "󰥱",
-        "empty": ""
-	},
+        "format": "{icon}",
+        "format-icons": {
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+        },
         "persistent-workspaces": {
-            "*": [1,2,3,4,5,6,7] // 5 workspaces by default on every monitor
+            "DP-1":[1,2,3,4,5,8,9],
+            "eDP-1":[8],
+            "HDMI-A-1":[9],
         }
     },
 
@@ -88,10 +93,10 @@
       "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
       "tooltip": true,
       "format-icons": {
-        "default": "󰓅",
-        "performance": "󰓅",
-        "balanced": "󰾅",
-        "power-saver": "󰾆"
+        "default": "PER",
+        "performance": "PER",
+        "balanced": "BAL",
+        "power-saver": "SAV"
       }
     },
     "battery": {
@@ -110,25 +115,35 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "󰥔 {:%H:%M}",
+        "format": "{:%H:%M}",
         "format-alt": "{:%Y-%m-%d}"
     },
-
+/*
     "cpu": {
         "format": " {usage}%",
         "format-alt": "{avg_frequency} GHz",
         "interval": 3,
-	"format-icons": {
-		"default": ["▁","▂","▃","▄","▅","▆","▇","█"]
-	}
     },
+*/
 
+    "cpu": {
+        "format": "CPU {icon}",
+        "format-alt": "{avg_frequency} GHz",
+        "interval": 3,
+	"format-icons": {
+    		"default": ["░░░░░░░░░░░","█░░░░░░░░░░","██░░░░░░░░░","███░░░░░░░░","████░░░░░░░", "█████░░░░░░", "██████░░░░░","███████░░░░","████████░░░","█████████░░", "██████████░", "███████████",] },
+},
 
+/*
     "memory": {
         "format": " {percentage}%",
         "interval": 3,
-        "format-icons": {
-		"default": ["▁","▂","▃","▄","▅","▆","▇","█"]
-        }
     }
+*/
+        "memory": {
+        "format": "MEM {icon}",
+        "interval": 3,
+        "format-icons": {
+            "default": ["░░░░░░░░░░░","█░░░░░░░░░░","██░░░░░░░░░","███░░░░░░░░","████░░░░░░░", "█████░░░░░░", "██████░░░░░","███████░░░░","████████░░░","█████████░░", "██████████░", "███████████",] },
+    },
 }
