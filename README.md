@@ -1,21 +1,14 @@
-# DOTFILES  - HYPRLAND Cyberpunk 2077 Theme
-- This is the repository for my rice dotfiles made to look like the cyberpunk 2077 netrunning ui
+# DOTFILES  - Simple monochrome rice
+- This is the repository for my very boring monochrome rice
 - This repo includes configs for:
   - hyprland - WM
   - waybar - The bar
   - mako - the notification daemon (admittedly looks like shit)
   - zathura - pdf viewer
   - kitty
+  - wofi
  
 # PLANS
 - Will probably add a hyprlock config at some point cuz im getting tired of not being able to lock my laptop lol
-- will probably configure wofi to fit the theme at some point idk
-- **I will most likely get bored of this sooner or later so I'll probably move the CP2077 rice to another folder or smthn after I make a new rice**
 
-## ADDITIONAL STUFF
-- this kind soul made a hyprlock config to go with the rice:
-- https://github.com/Nexus54233/Hyprlock_dotifiles_for_Eingorz/tree/main
-  
-  # IT MIGHT BE JANKY IDK I'M USUALLY TOO LAZY TO CONFIGURE STUFF THE "PROPER" WAY
-
-<img width="2560" height="1440" alt="2025-11-24-163542_hyprshot" src="https://github.com/user-attachments/assets/d0f2dd66-0350-4a7d-a577-1a403b905e79" />
+<img width="2558" height="1440" alt="image" src="https://github.com/user-attachments/assets/3c573f67-d3f9-4167-b61e-f99287f1589c" />
