@@ -7,8 +7,6 @@
   - zathura - pdf viewer
   - kitty
   - wofi
- 
-# PLANS
-- Will probably add a hyprlock config at some point cuz im getting tired of not being able to lock my laptop lol
-
+  - hyprlock (very basic)
+  - hypridle
 <img width="2558" height="1440" alt="image" src="https://github.com/user-attachments/assets/3c573f67-d3f9-4167-b61e-f99287f1589c" />
