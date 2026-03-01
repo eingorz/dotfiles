@@ -9,4 +9,5 @@
   - wofi
   - hyprlock (very basic)
   - hypridle
-<img width="2558" height="1440" alt="image" src="https://github.com/user-attachments/assets/3c573f67-d3f9-4167-b61e-f99287f1589c" />
+<img width="2560" height="1439" alt="image" src="https://github.com/user-attachments/assets/6ecdbbc0-2ca4-4222-ba85-d4dc047a2542" />
+
